@@ -6,4 +6,5 @@
  *
  */
 module Sokoban_java {
+	requires java.desktop;
 }
