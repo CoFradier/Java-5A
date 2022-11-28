@@ -1,4 +1,4 @@
-package Sokoban;
+/*package Sokoban;
 
 import java.util.HashMap;
 
@@ -159,4 +159,4 @@ public class Grille {
              return false;
     }
 
-}
+}*/
