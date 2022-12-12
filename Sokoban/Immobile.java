@@ -1,8 +1,10 @@
 package Sokoban;
 
+import java.awt.Graphics;
+
 import Sokoban.Coordonnees;
 
-public class Immobile {
+public abstract class Immobile {
 	
 	//attributs
 	protected Coordonnees pt;
@@ -22,7 +24,11 @@ public class Immobile {
 	    return pt.getX();
 	}
 
-	private int getY(){
+	public int getY(){
 	    return pt.getY();
 	}
+	
+	public  abstract  void dessiner(Graphics g);
+	
+	public  abstract  int getType();
 }

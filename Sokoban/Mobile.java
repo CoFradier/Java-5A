@@ -1,8 +1,10 @@
 package Sokoban;
 
+import java.awt.Graphics;
+
 import Sokoban.Coordonnees;
 
-public class Mobile {
+public abstract class Mobile {
 	
 	//attributs
 	protected Coordonnees pt;
@@ -29,5 +31,11 @@ public class Mobile {
 	public void deplacerDe(int dx, int dy){
 	    pt.deplacerDe(dx,dy);
 	}
+	
+	public  abstract  void dessiner(Graphics g);
+	
+	public  abstract  int getType();
+	
+	public  abstract  void setPlace(boolean pl);
 
 }

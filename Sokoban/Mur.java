@@ -1,11 +1,16 @@
 package Sokoban;
 
+import java.awt.Graphics;
+
+import javax.swing.ImageIcon;
+
 import Sokoban.Immobile;
 
 public class Mur extends Immobile{
 	//attributs
     protected int largeur;
     protected int hauteur;
+    protected ImageIcon m;
     
     //méthodes
     public Mur(){
@@ -18,13 +23,14 @@ public class Mur extends Immobile{
     	super(x,y);
         this.largeur=l;
         this.hauteur=h;
+        m = new ImageIcon("C:\\Users\\28070\\eclipse-workspace\\Sokoban\\PNG\\Wall_Brown.png");
     }
 
-    /*void Mur::dessiner(QPainter * p)const{
+    public void dessiner(Graphics g){
         //on place au bond endroit les x et y dans la grille avec les pixels
         //on multiplie x par 30 et pareil pour y puis on ajoute 60 parce qu'on laisse une marge en haut
-       p->drawPixmap(pt.getX()*30,pt.getY()*30+60,largeur,hauteur,QPixmap(":/Mur/PNG/Wall_Brown.png"));
-    }*/
+       g.drawImage(m.getImage(),pt.getX()*30,pt.getY()*30+60,largeur,hauteur,null);
+    }
 
     public int getType(){
         return 1;

@@ -1,5 +1,9 @@
 package Sokoban;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+
 import Sokoban.Immobile;
 
 public class Neant extends Immobile{
@@ -21,12 +25,13 @@ public class Neant extends Immobile{
         this.hauteur=h;
     }
 
-    /*void Neant::dessiner(QPainter * p)const{
+    public void dessiner(Graphics g){
         //on place au bond endroit les x et y dans la grille avec les pixels
         //on multiplie x par 30 et pareil pour y puis on ajoute 60 parce qu'on laisse une marge en haut
-       p->drawRect(pt.getX()*30,pt.getY()*30+60,largeur,hauteur);
-       p->fillRect(pt.getX()*30,pt.getY()*30+60,largeur,hauteur,QBrush(Qt::black));
-    }*/
+    	g.setColor(Color.BLACK);
+        g.fillRect(pt.getX()*30,pt.getY()*30+60,largeur,hauteur);
+       
+    }
 
     public int getType(){
         return 0;

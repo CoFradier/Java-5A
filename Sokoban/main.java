@@ -9,19 +9,22 @@ public class Main {
 		// TODO Auto-generated method stub
 		EventQueue.invokeLater(new Runnable() {
             public void run() {
+            	String nom = "alex";
+            	int niv = 1;
+            	int compteur = 230;
                 // Votre fonction Run
                 // Vos information de connexion à une base de données
                 String BDD = "test";
                 String url = "jdbc:mysql://localhost:3306/" + BDD;
                 String user = "root";
-                String passwd = "Amcn2807";
+                String passwd = "";
                 // L'essaie de connexion à votre base de donées
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conn = DriverManager.getConnection(url, user, passwd);
                     Statement stm=conn.createStatement();
                     System.out.println("Connecter");
-                    String query = "INSERT INTO utilisateur (`id`,`nom` , `prenom`) " + "VALUES ( 1,'Robert', 'Michel')";
+                    String query = "INSERT INTO resultat (`Pseudo`,`Niveau`, `NbCoups`) " + "VALUES ('nom',1,2)";
         	        stm.executeUpdate(query);
                 } catch (Exception e){
                     e.printStackTrace();
